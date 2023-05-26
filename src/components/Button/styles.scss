@@ -1,0 +1,40 @@
+@use '../../assets/styles/' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-family: $f-family;
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  & p {
+    margin: 8px 0px;
+  }
+  @include button(
+    13px,
+    700,
+    6px,
+    32px,
+    $primary-color,
+    $primary-color,
+    $color-white-0,
+    $color-white-0
+  );
+  .button__icon {
+    margin-right: 10px;
+  }
+
+  i {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
